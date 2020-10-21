@@ -1,17 +1,23 @@
 <template>
   <div id="app">
     <Todos v-bind:todos="todos"/>
+    <placeholderFondo />
+    <placeholderMenu />
   </div>
 </template>
 
 <script>
 import Todos from './components/Todos';
+import placeholderFondo from './components/placeholderFondo';
+import placeholderMenu from './components/placeholderMenu';
 
 
 export default {
   name: 'App',
   components: {
-    Todos
+    Todos,
+    placeholderFondo,
+    placeholderMenu
   },
   data(){
     return {
@@ -38,6 +44,15 @@ export default {
 </script>
 
 <style>
+  .container {
+  display: flex; /* or inline-flex */
+  flex-direction: column;
+  flex-wrap: nowrap;
+  order: 2;
+}
+
+
+
   *{
     box-sizing: border-box;
     margin: 0;
