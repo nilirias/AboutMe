@@ -1,27 +1,32 @@
 <template>
-    <div>
-        <p>adios</p>
+    <div class = "container">
         <imgFondo />
+        <descripcion />
+        <opciones />
     </div>
 </template>
 
 <script>
 import imgFondo from './imgFondo'
+import descripcion from './descripcion'
+import opciones from './opciones'
 
 export default {
     name: 'container',
     components: {
-        imgFondo
+        imgFondo,
+        descripcion,
+        opciones
     }
 }
+
+
 </script>
 
 <style scoped>
  .container {
   display: flex; /* or inline-flex */
-  flex-direction: column;
-  flex-wrap: nowrap;
-  order: 2;
+  flex-wrap: wrap;
 }
 
 </style>

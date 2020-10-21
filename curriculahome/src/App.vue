@@ -22,5 +22,12 @@ export default {
 </script>
 
 <style>
- 
+  @font-face {
+      font-family: 'Early GameBoy';
+    src: url('./assets/Early GameBoy.ttf');
+  }
+
+  *{
+    font-family: "Early GameBoy";
+  }
 </style>

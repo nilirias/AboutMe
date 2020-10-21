@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class = "fondoStyle">
         <h1> img fondo </h1>
     </div>
 </template>
@@ -11,5 +11,8 @@ export default {
 </script>
 
 <style scoped>
-
+    .fondoStyle{
+        width: 100%;
+        height: 48vh;
+    }
 </style>
