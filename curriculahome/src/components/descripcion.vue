@@ -1,20 +1,22 @@
 <template>
     <div class ="descStyle">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, enim, mollitia explicabo dolorum beatae aliquam, quo commodi saepe quisquam id laboriosam. Exercitationem ipsum ducimus minus laborum. Harum doloribus aspernatur facere.
+        {{mensaje}}
     </div>
 </template>
 
 <script>
 export default {
-    name: 'descripcion'
+    name: 'descripcion',
+
+    props: ['mensaje']
 }
 </script>
 
 <style scoped>
     .descStyle{
-        border: 1px solid black;
+        border: 10px solid black;
         width : 53vw;
-        height : 48vh;
+        height : 35vh;
         padding: 50px;
         align-content: stretch;
     }

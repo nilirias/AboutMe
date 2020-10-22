@@ -1,12 +1,12 @@
 <template>
     <div class = "container">
         <imgFondo />
-        <descripcion />
-        <opciones />
+        <descripcion :mensaje = "mensaje" />
+        <opciones v-on:actualizarTexto = "opcionUno" />
     </div>
 </template>
 
-<script>
+<script>    
 import imgFondo from './imgFondo'
 import descripcion from './descripcion'
 import opciones from './opciones'
@@ -17,10 +17,21 @@ export default {
         imgFondo,
         descripcion,
         opciones
+    },
+
+    methods: {
+        opcionUno : function(mensaje){
+            this.mensaje = mensaje,
+            console.log("cualquier tonteria")
+        }
+    },
+
+    data(){
+        return {
+            mensaje : "pito"
+        }
     }
 }
-
-
 </script>
 
 <style scoped>
