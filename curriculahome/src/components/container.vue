@@ -37,12 +37,22 @@ export default {
 </script>
 
 <style scoped>
- .container {
-  display: flex; /* or inline-flex */
-  flex-wrap: wrap;
 
-  background: black;
-  color: white;
-}
+@media(min-width: 576px){
+    .container {
+    display: flex; /* or inline-flex */
+    flex-wrap: wrap;
+
+    background: black;
+    color: white;
+    }
+  }
+
+  @media(max-width: 575px){
+      .container{
+          display: flex;
+          flex-direction: column;
+      }
+  }
 
 </style>
