@@ -1,7 +1,7 @@
 <template>
     <div class = "container">
         <imgFondo />
-        <descripcion :mensaje = "mensaje" />
+        <descripcion :datos = "datos" />
         <opciones v-on:actualizarTexto = "opcionUno" />
     </div>
 </template>
@@ -20,15 +20,17 @@ export default {
     },
 
     methods: {
-        opcionUno : function(mensaje){
-            this.mensaje = mensaje,
+        opcionUno : function(datos){
+            this.datos = datos,
             console.log("cualquier tonteria")
         }
     },
 
     data(){
         return {
-            mensaje : "pito"
+            datos: {
+                mensaje:"Bienvenido"
+            }
         }
     }
 }
@@ -38,6 +40,9 @@ export default {
  .container {
   display: flex; /* or inline-flex */
   flex-wrap: wrap;
+
+  background: black;
+  color: white;
 }
 
 </style>
