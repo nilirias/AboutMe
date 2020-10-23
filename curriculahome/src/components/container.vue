@@ -38,11 +38,14 @@ export default {
 
 <style scoped>
 
+.container{
+    background:black;
+}
+
 @media(min-width: 576px){
     .container {
     display: flex; /* or inline-flex */
     flex-wrap: wrap;
-
     background: black;
     color: white;
     }

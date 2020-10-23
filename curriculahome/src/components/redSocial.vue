@@ -1,14 +1,12 @@
 <template>
     <div>
-        <img src="https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c53e.png">
+        <img src="https://secureservercdn.net/192.169.221.188/7d7.5b1.myftpupload.com/wp-content/uploads/2014/10/Twitter_logo_white.png?time=1597441252"> Twitter
     </div>
-    
 </template>
 
 <script>
 export default {
-    name: 'redSocial',
-    
+    name: 'redSocial'
 }
 </script>
 
@@ -16,6 +14,7 @@ export default {
     img{
         padding: 5px;
         width: 50px;
+        align-content: center;
     }
 
 </style>

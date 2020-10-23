@@ -14,5 +14,6 @@ export default {
     .fondoStyle{
         width: 100%;
         height: 48vh;
+        background: black;
     }
 </style>

@@ -63,12 +63,6 @@ Total Lines Sent: ${result.totalsent}`
 
 <style scoped>
     .opcionStyle{
-        border: 10px solid white;
-        width : 29.2vw;
-        height: 35vh;
-        padding: 50px;
-        padding-top: 30px;
-        padding-bottom: 80px;
         align-content: stretch;
         background: black;
         color: white;
@@ -80,7 +74,6 @@ Total Lines Sent: ${result.totalsent}`
 
     button{
         margin: 5px;
-        font-size: 20px;
         text-align: left;
         text-decoration: none;
         outline: none;
@@ -90,10 +83,10 @@ Total Lines Sent: ${result.totalsent}`
         border-radius: 15px;
     }
 
-    button:hover {background-color: #3e8e41}
+    button:hover {background-color: #8e3e7d}
 
     button:active {
-    background-color: #3e8e41;
+    background-color: #8e3e7d;
     transform: translateY(4px);
     }
 
@@ -105,4 +98,27 @@ Total Lines Sent: ${result.totalsent}`
         font-size: 15px;
     }
 
+    @media(min-width: 576px){
+         .opcionStyle{
+            border: 10px solid white;
+            width : calc(40% - 20px);
+            height: calc(50vh - 20px);
+         }
+
+         button{
+             font-size: 1.5rem;
+         }
+    }
+
+    @media(max-width: 575px){
+        .opcionStyle{
+            width: calc(100%-2px);
+            font-size: 0.8rem;
+            border: 1px solid white;
+            padding: 1rem;
+        }
+        button{
+            font-size: 1rem;
+        }
+    }
 </style>
