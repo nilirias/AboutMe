@@ -31,7 +31,17 @@ export default {
     data(){
         
         return{
-           myArray:["Nina es una chava", "No hace nada", "No dibuja", "", ""],
+           myArray:[`21 - MX - Aquarius 
+
+ Nina is a Computer Science student at Tec de Monterrey. 
+
+ She enjoys drawing in her free times and also plays Tetris competitively.
+
+ She currently works as a tenis shoe artist.
+
+ Fun Fact: She hasn't died yet.
+       `, `Her latest project can be found at her itch.io profile, she recently participated at a Game Jam in which she and her team won first place by developing a top-down cute videogame in Godot. `, 
+       'Only sometimes, you can catch her art at her Instagram account', "", ""],
            dinero: Math.floor(Math.random() * 100000) + 1
         }
 
@@ -94,8 +104,9 @@ Total Lines Sent: ${result.totalsent}`
         background: black;
         color: yellow;
         text-align: right;
-        padding-bottom: 0%;
-        font-size: 15px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        font-size: 1.3rem;
     }
 
     @media(min-width: 576px){

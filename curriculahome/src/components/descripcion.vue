@@ -25,13 +25,15 @@ export default {
         background: black;
         color: white;
         overflow-y: scroll;
+        padding-left: 30px;
+        padding-top: 30px;
         }
 
     @media(min-width: 576px){
         .descStyle{
         border: 10px solid white;
-        width : calc(60% - 20px);
-        height : calc(50vh - 20px);
+        width : calc(60% - 50px);
+        height : calc(50vh - 50px);
         font-size: 1.5rem;
 
 
