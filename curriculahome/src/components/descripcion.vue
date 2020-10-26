@@ -1,19 +1,32 @@
 <template>
     <div class ="descStyle">
-        <redSocial v-show = "datos.visible" /> 
+        
+        <redSocial v-show = "datos.redes" /> 
+        <instagram v-show = "datos.ig" />
+
+        <!-- <span class="ml9">
+            <span class="text-wrapper">
+            <span class="letters">  </span>
+            </span>
+        </span> --> 
+
         {{datos.mensaje}}
+        
     </div>
 </template>
 
 <script>
 import redSocial from "./redSocial"
+import instagram from "./instagram"
 
 export default {
     name: 'descripcion',
     props: ['datos'],
     components:{
-        redSocial
+        redSocial,
+        instagram
     }
+
 }
 </script>
 

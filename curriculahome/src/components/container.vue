@@ -21,8 +21,7 @@ export default {
 
     methods: {
         opcionUno : function(datos){
-            this.datos = datos,
-            console.log("cualquier tonteria")
+            this.datos = datos
         }
     },
 

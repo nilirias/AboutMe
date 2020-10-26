@@ -1,5 +1,6 @@
 <template>
     <div class="opcionStyle">
+       
         <ul> <li> <button v-on:click = "actualizarTexto" id = "0"> Who is Nina? </button></li>
         <li> <button v-on:click = "actualizarTexto" id = "1"> What are some of her projects? </button></li>
         <li> <button v-on:click = "actualizarTexto" id = "2"> She draws? </button></li>
@@ -7,7 +8,7 @@
         <li> <button v-on:click = "actualizarTexto" id = "4"> JStris Statistics </button></li> </ul>
 
         <div class="totalDinero">
-            <p> § {{dinero}} </p>
+            <p> {{dinero}} ( </p>
         </div>
     </div>
 
@@ -19,14 +20,22 @@ export default {
     name: "opciones",
     methods: {
         actualizarTexto : function(e){
-            let visible = false
+            let redes = false
             if (e.target.id === "3") {
-                visible = true
+                redes = true
             }
-           
-            this.$emit("actualizarTexto", {mensaje :this.myArray[e.target.id], visible})
+
+            let ig = false
+            if (e.target.id === "2"){
+                ig = true
+            }
+            
+            // const elt = document.querySelector(".letter")
+            // elt.parentElement.innerHTML = ""
+
+            this.$emit("actualizarTexto", {mensaje :this.myArray[e.target.id], redes, ig})
         }
-    },
+     },
 
     data(){
         
@@ -41,7 +50,7 @@ export default {
 
  Fun Fact: She hasn't died yet.
        `, `Her latest project can be found at her itch.io profile, she recently participated at a Game Jam in which she and her team won first place by developing a top-down cute videogame in Godot. `, 
-       'Only sometimes, you can catch her art at her Instagram account', "", ""],
+       "", "", ""],
            dinero: Math.floor(Math.random() * 100000) + 1
         }
 
@@ -132,4 +141,5 @@ Total Lines Sent: ${result.totalsent}`
             font-size: 1rem;
         }
     }
+
 </style>
