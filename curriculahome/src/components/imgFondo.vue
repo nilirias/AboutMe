@@ -1,6 +1,6 @@
 <template>
     <div class = "fondoStyle">
-        <h1> img fondo </h1>
+        <img src ="../assets/imgfondo.png">
     </div>
 </template>
 
@@ -15,5 +15,10 @@ export default {
         width: 100%;
         height: 48vh;
         background: black;
+    }
+
+    img{
+        height: 100%;
+        width: 100%;
     }
 </style>
