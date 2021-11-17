@@ -28,7 +28,7 @@ export default {
     data(){
         return {
             datos: {
-                mensaje:"Bienvenido"
+                mensaje:"Bienvenido a mi pagina \n Welcome to my page \n\n Choose your journey: \n Escoge tu destino: \n"
             }
         }
     }

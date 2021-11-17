@@ -1,9 +1,8 @@
 <template>
     <div class="opcionStyle">
        
-        <ul> <li> <button v-on:click = "actualizarTexto" id = "0"> Who is Nina? </button></li>
+        <ul> <li> <button v-on:click = "actualizarTexto" id = "0"> {{t('Who is Nina?')}} </button></li>
         <li> <button v-on:click = "actualizarTexto" id = "1"> What are some of her projects? </button></li>
-        <li> <button v-on:click = "actualizarTexto" id = "2"> She draws? </button></li>
         <li> <button v-on:click = "actualizarTexto" id = "3"> Where can I find her? </button></li>
         <li> <button v-on:click = "actualizarTexto" id = "4"> JStris Statistics </button></li> </ul>
 
@@ -37,6 +36,12 @@ export default {
         }
      },
 
+     locales: {
+         Espanol:{
+             "Who is Nina?" : "¿Quien es Nina?"
+         }
+     },
+
     data(){
         
         return{
@@ -58,11 +63,11 @@ export default {
 
     mounted(){
 
-        fetch('https://cors-anywhere.herokuapp.com/https://jstris.jezevec10.com/api/u/nilirias/live')
+        fetch('https://jstris.jezevec10.com/api/u/nilirias/live')
         .then(response => response.json())
         .then(result => {
             let jstris = `
-Total Games: ${result.games}
+Total Games: ${result.games}x
 Max APM: ${result.mAPM}
 Maximum of Lines Sent: ${result.maxSent}
 Longest Combo: ${result.maxmaxCombo}
