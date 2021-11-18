@@ -11,7 +11,7 @@
         </span> --> 
 
         {{datos.mensaje}}
-        <div class = "idiomas">
+        <div class = "idiomas" v-if="!idioma">
             <div class="pixel2" @click="setLanguage('EN') ">EN</div> <div class="pixel2" @click="setLanguage('ES')">ES</div>
             <!-- <button> EN </button> <button> ES </button> -->
         </div>
@@ -34,10 +34,16 @@ export default {
         setLanguage(lang) {
             if(lang === "EN"){
                 this.$translate.setLang('English');
+                this.idioma = true;
             } else{
                 this.$translate.setLang('Espanol');
+                this.idioma = true;
             }
         }
+    },
+
+    data(){
+        return {idioma : false}
     }
 
 }
